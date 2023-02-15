@@ -16,11 +16,13 @@ final class MyClassTests: XCTestCase {
     
     private var sut: MyClass!
     
+    //Create instance for every test
     override func setUp() {
         super.setUp()
         sut = MyClass()
     }
     
+    //Destroy instance for every test
     override func tearDown() {
         sut = nil
         super.tearDown()
