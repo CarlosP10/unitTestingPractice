@@ -16,6 +16,8 @@
 		7A294C2129C3D2B000B13A16 /* LoadViewControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C2029C3D2B000B13A16 /* LoadViewControllersTests.swift */; };
 		7A294C2B29C3D2B000B13A16 /* LoadViewControllersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C2A29C3D2B000B13A16 /* LoadViewControllersUITests.swift */; };
 		7A294C2D29C3D2B000B13A16 /* LoadViewControllersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C2C29C3D2B000B13A16 /* LoadViewControllersUITestsLaunchTests.swift */; };
+		7A294C3A29C3D40E00B13A16 /* CodeBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C3929C3D40E00B13A16 /* CodeBasedViewController.swift */; };
+		7A294C3C29C3D54000B13A16 /* CodeBasedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A294C3B29C3D54000B13A16 /* CodeBasedViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7A294C2629C3D2B000B13A16 /* LoadViewControllersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadViewControllersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A294C2A29C3D2B000B13A16 /* LoadViewControllersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewControllersUITests.swift; sourceTree = "<group>"; };
 		7A294C2C29C3D2B000B13A16 /* LoadViewControllersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewControllersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A294C3929C3D40E00B13A16 /* CodeBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBasedViewController.swift; sourceTree = "<group>"; };
+		7A294C3B29C3D54000B13A16 /* CodeBasedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBasedViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				7A294C1229C3D2B000B13A16 /* Assets.xcassets */,
 				7A294C1429C3D2B000B13A16 /* LaunchScreen.storyboard */,
 				7A294C1729C3D2B000B13A16 /* Info.plist */,
+				7A294C3929C3D40E00B13A16 /* CodeBasedViewController.swift */,
 			);
 			path = LoadViewControllers;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				7A294C2029C3D2B000B13A16 /* LoadViewControllersTests.swift */,
+				7A294C3B29C3D54000B13A16 /* CodeBasedViewControllerTests.swift */,
 			);
 			path = LoadViewControllersTests;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A294C0E29C3D2AD00B13A16 /* ViewController.swift in Sources */,
+				7A294C3A29C3D40E00B13A16 /* CodeBasedViewController.swift in Sources */,
 				7A294C0A29C3D2AD00B13A16 /* AppDelegate.swift in Sources */,
 				7A294C0C29C3D2AD00B13A16 /* SceneDelegate.swift in Sources */,
 			);
@@ -269,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A294C2129C3D2B000B13A16 /* LoadViewControllersTests.swift in Sources */,
+				7A294C3C29C3D54000B13A16 /* CodeBasedViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
