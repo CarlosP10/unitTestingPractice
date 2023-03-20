@@ -9,14 +9,16 @@ import UIKit
 
 class InstancePropertyViewController: UIViewController {
 
+    //By declaring it lazy, the property won’t have an initial value.
+    lazy var analytics = Analytics.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) { super.viewDidAppear(animated)
-        Analytics.shared.track(event: "viewDidAppear - \(type(of: self))")
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        analytics.track(event: "viewDidAppear - \(type(of: self))")
     }
 
 }

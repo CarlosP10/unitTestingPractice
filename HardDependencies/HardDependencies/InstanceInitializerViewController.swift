@@ -9,13 +9,19 @@ import UIKit
 
 class InstanceInitializerViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    private let analytics: Analytics
+    
+    init(analytics: Analytics) {
+        self.analytics = analytics
+        super.init(nibName: nil, bundle: nil)
     }
     
-    override func viewDidAppear(_ animated: Bool) { super.viewDidAppear(animated)
-        Analytics.shared.track(event: "viewDidAppear - \(type(of: self))")
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        analytics.track(event: "viewDidAppear - \(type(of: self))")
     }
 }
