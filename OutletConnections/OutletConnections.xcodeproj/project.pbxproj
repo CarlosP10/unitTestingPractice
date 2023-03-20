@@ -16,6 +16,9 @@
 		7A5EA5AB29C9191E00139D77 /* OutletConnectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EA5AA29C9191E00139D77 /* OutletConnectionsTests.swift */; };
 		7A5EA5B529C9191E00139D77 /* OutletConnectionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EA5B429C9191E00139D77 /* OutletConnectionsUITests.swift */; };
 		7A5EA5B729C9191E00139D77 /* OutletConnectionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EA5B629C9191E00139D77 /* OutletConnectionsUITestsLaunchTests.swift */; };
+		7AE79F9729C91A7E0015E021 /* OutletConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE79F9529C91A7E0015E021 /* OutletConnectionsViewController.swift */; };
+		7AE79F9829C91A7E0015E021 /* OutletConnectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AE79F9629C91A7E0015E021 /* OutletConnectionsViewController.xib */; };
+		7AE79F9C29C91C1D0015E021 /* OutletConnectionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE79F9B29C91C1D0015E021 /* OutletConnectionsViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		7A5EA5B029C9191E00139D77 /* OutletConnectionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutletConnectionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5EA5B429C9191E00139D77 /* OutletConnectionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsUITests.swift; sourceTree = "<group>"; };
 		7A5EA5B629C9191E00139D77 /* OutletConnectionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7AE79F9529C91A7E0015E021 /* OutletConnectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsViewController.swift; sourceTree = "<group>"; };
+		7AE79F9629C91A7E0015E021 /* OutletConnectionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutletConnectionsViewController.xib; sourceTree = "<group>"; };
+		7AE79F9B29C91C1D0015E021 /* OutletConnectionsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,8 @@
 				7A5EA59C29C9191E00139D77 /* Assets.xcassets */,
 				7A5EA59E29C9191E00139D77 /* LaunchScreen.storyboard */,
 				7A5EA5A129C9191E00139D77 /* Info.plist */,
+				7AE79F9529C91A7E0015E021 /* OutletConnectionsViewController.swift */,
+				7AE79F9629C91A7E0015E021 /* OutletConnectionsViewController.xib */,
 			);
 			path = OutletConnections;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				7A5EA5AA29C9191E00139D77 /* OutletConnectionsTests.swift */,
+				7AE79F9B29C91C1D0015E021 /* OutletConnectionsViewControllerTests.swift */,
 			);
 			path = OutletConnectionsTests;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 				7A5EA5A029C9191E00139D77 /* LaunchScreen.storyboard in Resources */,
 				7A5EA59D29C9191E00139D77 /* Assets.xcassets in Resources */,
 				7A5EA59B29C9191B00139D77 /* Main.storyboard in Resources */,
+				7AE79F9829C91A7E0015E021 /* OutletConnectionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +271,7 @@
 				7A5EA59829C9191B00139D77 /* ViewController.swift in Sources */,
 				7A5EA59429C9191B00139D77 /* AppDelegate.swift in Sources */,
 				7A5EA59629C9191B00139D77 /* SceneDelegate.swift in Sources */,
+				7AE79F9729C91A7E0015E021 /* OutletConnectionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5EA5AB29C9191E00139D77 /* OutletConnectionsTests.swift in Sources */,
+				7AE79F9C29C91C1D0015E021 /* OutletConnectionsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
