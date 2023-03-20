@@ -1,4 +1,4 @@
-# AppLaunch
+# HardDependencies
 
 ### Key Takeaways
 
