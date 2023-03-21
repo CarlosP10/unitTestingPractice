@@ -16,6 +16,10 @@
 		7AE7A00129CA24930015E021 /* AlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7A00029CA24930015E021 /* AlertTests.swift */; };
 		7AE7A00B29CA24930015E021 /* AlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7A00A29CA24930015E021 /* AlertUITests.swift */; };
 		7AE7A00D29CA24930015E021 /* AlertUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7A00C29CA24930015E021 /* AlertUITestsLaunchTests.swift */; };
+		7AE7A01A29CA416B0015E021 /* ViewControllerPresentationSpy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE7A01929CA416B0015E021 /* ViewControllerPresentationSpy.xcframework */; };
+		7AE7A01E29CA42E60015E021 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7A01D29CA42E60015E021 /* ViewControllerTests.swift */; };
+		7AE7A02029CA431D0015E021 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE7A01F29CA431D0015E021 /* TestHelpers.swift */; };
+		7AE7A02229CA48490015E021 /* ViewControllerPresentationSpy.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7AE7A01929CA416B0015E021 /* ViewControllerPresentationSpy.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7AE7A02129CA47800015E021 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				7AE7A02229CA48490015E021 /* ViewControllerPresentationSpy.xcframework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7AE79FE629CA24900015E021 /* Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE79FE929CA24900015E021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,9 @@
 		7AE7A00629CA24930015E021 /* AlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE7A00A29CA24930015E021 /* AlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUITests.swift; sourceTree = "<group>"; };
 		7AE7A00C29CA24930015E021 /* AlertUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7AE7A01929CA416B0015E021 /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ViewControllerPresentationSpy.xcframework; sourceTree = "<group>"; };
+		7AE7A01D29CA42E60015E021 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		7AE7A01F29CA431D0015E021 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE7A01A29CA416B0015E021 /* ViewControllerPresentationSpy.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +134,10 @@
 		7AE79FFF29CA24930015E021 /* AlertTests */ = {
 			isa = PBXGroup;
 			children = (
+				7AE7A01929CA416B0015E021 /* ViewControllerPresentationSpy.xcframework */,
 				7AE7A00029CA24930015E021 /* AlertTests.swift */,
+				7AE7A01D29CA42E60015E021 /* ViewControllerTests.swift */,
+				7AE7A01F29CA431D0015E021 /* TestHelpers.swift */,
 			);
 			path = AlertTests;
 			sourceTree = "<group>";
@@ -153,7 +177,7 @@
 			buildPhases = (
 				7AE79FF829CA24930015E021 /* Sources */,
 				7AE79FF929CA24930015E021 /* Frameworks */,
-				7AE79FFA29CA24930015E021 /* Resources */,
+				7AE7A02129CA47800015E021 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -237,13 +261,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AE79FFA29CA24930015E021 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7AE7A00429CA24930015E021 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,7 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE7A01E29CA42E60015E021 /* ViewControllerTests.swift in Sources */,
 				7AE7A00129CA24930015E021 /* AlertTests.swift in Sources */,
+				7AE7A02029CA431D0015E021 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
