@@ -35,13 +35,19 @@ class CodeNextViewController: UIViewController {
     private func activateEqualConstraints(
         _ attribute: NSLayoutConstraint.Attribute,
         fromItem: UIView,
-        toItem: UIView) {
-            NSLayoutConstraint( item: fromItem,
-                                attribute: attribute,
-                                relatedBy: .equal,
-                                toItem: toItem,
-                                attribute: attribute,
-                                multiplier: 1,
-                                constant: 0
-            ).isActive = true }
+        toItem: UIView){
+        NSLayoutConstraint( item: fromItem,
+                            attribute: attribute,
+                            relatedBy: .equal,
+                            toItem: toItem,
+                            attribute: attribute,
+                            multiplier: 1,
+                            constant: 0
+        ).isActive = true
+    }
+    
+    deinit {
+        print(">> CodeNextViewController.deinit")
+    }
+    
 }

@@ -18,6 +18,10 @@ class SegueNextViewController: UIViewController {
         label.numberOfLines = 0
         label.text = labelText
     }
+    
+    deinit {
+        print(">> SegueNextViewController.deinit")
+    }
 
 
 }
