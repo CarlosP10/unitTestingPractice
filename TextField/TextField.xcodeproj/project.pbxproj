@@ -16,6 +16,8 @@
 		7AA4E54829F2FBBC00ED785D /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E54729F2FBBC00ED785D /* TextFieldTests.swift */; };
 		7AA4E55229F2FBBC00ED785D /* TextFieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E55129F2FBBC00ED785D /* TextFieldUITests.swift */; };
 		7AA4E55429F2FBBC00ED785D /* TextFieldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E55329F2FBBC00ED785D /* TextFieldUITestsLaunchTests.swift */; };
+		7AA4E56129F31F3E00ED785D /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E56029F31F3E00ED785D /* ViewControllerTests.swift */; };
+		7AA4E56329F32B4700ED785D /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E56229F32B4700ED785D /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7AA4E54D29F2FBBC00ED785D /* TextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA4E55129F2FBBC00ED785D /* TextFieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldUITests.swift; sourceTree = "<group>"; };
 		7AA4E55329F2FBBC00ED785D /* TextFieldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7AA4E56029F31F3E00ED785D /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		7AA4E56229F32B4700ED785D /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				7AA4E54729F2FBBC00ED785D /* TextFieldTests.swift */,
+				7AA4E56029F31F3E00ED785D /* ViewControllerTests.swift */,
+				7AA4E56229F32B4700ED785D /* TestHelpers.swift */,
 			);
 			path = TextFieldTests;
 			sourceTree = "<group>";
@@ -268,7 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA4E56129F31F3E00ED785D /* ViewControllerTests.swift in Sources */,
 				7AA4E54829F2FBBC00ED785D /* TextFieldTests.swift in Sources */,
+				7AA4E56329F32B4700ED785D /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
