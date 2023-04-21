@@ -36,4 +36,30 @@ final class ViewControllerTests: XCTestCase {
         XCTAssertEqual(passwordField.returnKeyType, .go, "returnKeyType")
         XCTAssertTrue(passwordField.isSecureTextEntry, "isSecureTextEntry")
     }
+    
+    func test_textFieldDelegates_shouldBeConnected() {
+        XCTAssertNotNil(sut.usernameField.delegate,"usernameField")
+        XCTAssertNotNil(sut.passwordField.delegate,"passwordField")
+    }
+    
+    func test_shouldChangeCharacters_usernameWithSpaces_shouldPreventChange() {
+        let allowChange = shouldChangeCharacters(in: sut.usernameField, replacement: "a b")
+        XCTAssertEqual(allowChange, false)
+    }
+    
+    func test_shouldChangeCharacters_usernameWithoutSpaces_shouldAllowChange() {
+        let allowChange = shouldChangeCharacters(in: sut.usernameField, replacement: "abc")
+        XCTAssertEqual(allowChange, true)
+    }
+    
+    func test_shouldChangeCharacters_passwordWithSpaces_shouldAllowChange() {
+        let allowChange = shouldChangeCharacters(in: sut.passwordField, replacement: "a b")
+        XCTAssertEqual(allowChange, true)
+    }
+    
+    func test_shouldChangeCharacters_passwordWithoutSpaces_shouldAllowChange() {
+        let allowChange = shouldChangeCharacters(in: sut.passwordField, replacement: "abc")
+        XCTAssertEqual(allowChange, true)
+    }
 }
+
