@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                   let password = passwordField.text else {
                 return false
             }
-            passwordField.becomeFirstResponder()
+            passwordField.resignFirstResponder()
             performLogin(username: username, password: password)
         }
         return false
@@ -49,6 +49,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("Password: \(password)")
     }
 
-
+    deinit {
+        print("ViewController.deinit")
+    }
 }
 

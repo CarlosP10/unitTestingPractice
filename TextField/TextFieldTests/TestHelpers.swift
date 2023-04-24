@@ -69,3 +69,19 @@ func shouldChangeCharacters(in textField: UITextField,
             shouldChangeCharactersIn: range,
             replacementString: replacement)
 }
+
+@discardableResult func shouldReturn(in textField: UITextField) -> Bool? {
+    textField.delegate?.textFieldShouldReturn?(textField)
+}
+
+/// UIKit needs the view to live inside a view hierarchy
+/// - Parameter vc: ViewController
+func putInViewHierarchy(_ vc: UIViewController) {
+    let window = UIWindow()
+    window.addSubview(vc.view)
+}
+
+///We need to do this whenever any test code calls the putInViewHierarchy() helper.
+func executeRunLoop() {
+    RunLoop.current.run(until: Date())
+}
