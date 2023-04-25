@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		7AA4E57129F6D6EB00ED785D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E57029F6D6EB00ED785D /* AppDelegate.swift */; };
 		7AA4E57329F6D6EB00ED785D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E57229F6D6EB00ED785D /* SceneDelegate.swift */; };
-		7AA4E57529F6D6EB00ED785D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E57429F6D6EB00ED785D /* ViewController.swift */; };
 		7AA4E57829F6D6EB00ED785D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA4E57629F6D6EB00ED785D /* Main.storyboard */; };
 		7AA4E57A29F6D6EF00ED785D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AA4E57929F6D6EF00ED785D /* Assets.xcassets */; };
 		7AA4E57D29F6D6EF00ED785D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AA4E57B29F6D6EF00ED785D /* LaunchScreen.storyboard */; };
 		7AA4E58829F6D6F000ED785D /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E58729F6D6F000ED785D /* TableViewTests.swift */; };
 		7AA4E59229F6D6F000ED785D /* TableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E59129F6D6F000ED785D /* TableViewUITests.swift */; };
 		7AA4E59429F6D6F000ED785D /* TableViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E59329F6D6F000ED785D /* TableViewUITestsLaunchTests.swift */; };
+		7AA4E5A129F6DFD600ED785D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E5A029F6DFD600ED785D /* TableViewController.swift */; };
+		7AA4E5A329F7481300ED785D /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E5A229F7481300ED785D /* TableViewControllerTests.swift */; };
+		7AA4E5A529F8202400ED785D /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA4E5A429F8202400ED785D /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		7AA4E56D29F6D6EB00ED785D /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA4E57029F6D6EB00ED785D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AA4E57229F6D6EB00ED785D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7AA4E57429F6D6EB00ED785D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7AA4E57729F6D6EB00ED785D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AA4E57929F6D6EF00ED785D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7AA4E57C29F6D6EF00ED785D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		7AA4E58D29F6D6F000ED785D /* TableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA4E59129F6D6F000ED785D /* TableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITests.swift; sourceTree = "<group>"; };
 		7AA4E59329F6D6F000ED785D /* TableViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7AA4E5A029F6DFD600ED785D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		7AA4E5A229F7481300ED785D /* TableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
+		7AA4E5A429F8202400ED785D /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,11 @@
 			children = (
 				7AA4E57029F6D6EB00ED785D /* AppDelegate.swift */,
 				7AA4E57229F6D6EB00ED785D /* SceneDelegate.swift */,
-				7AA4E57429F6D6EB00ED785D /* ViewController.swift */,
 				7AA4E57629F6D6EB00ED785D /* Main.storyboard */,
 				7AA4E57929F6D6EF00ED785D /* Assets.xcassets */,
 				7AA4E57B29F6D6EF00ED785D /* LaunchScreen.storyboard */,
 				7AA4E57E29F6D6EF00ED785D /* Info.plist */,
+				7AA4E5A029F6DFD600ED785D /* TableViewController.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -114,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				7AA4E58729F6D6F000ED785D /* TableViewTests.swift */,
+				7AA4E5A229F7481300ED785D /* TableViewControllerTests.swift */,
+				7AA4E5A429F8202400ED785D /* TestHelpers.swift */,
 			);
 			path = TableViewTests;
 			sourceTree = "<group>";
@@ -258,9 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AA4E57529F6D6EB00ED785D /* ViewController.swift in Sources */,
 				7AA4E57129F6D6EB00ED785D /* AppDelegate.swift in Sources */,
 				7AA4E57329F6D6EB00ED785D /* SceneDelegate.swift in Sources */,
+				7AA4E5A129F6DFD600ED785D /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AA4E58829F6D6F000ED785D /* TableViewTests.swift in Sources */,
+				7AA4E5A329F7481300ED785D /* TableViewControllerTests.swift in Sources */,
+				7AA4E5A529F8202400ED785D /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
