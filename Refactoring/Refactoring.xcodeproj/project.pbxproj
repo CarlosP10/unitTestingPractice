@@ -13,7 +13,14 @@
 		7A74B08C29FAE75D008DA1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A74B08A29FAE75D008DA1BD /* Main.storyboard */; };
 		7A74B08E29FAE760008DA1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A74B08D29FAE760008DA1BD /* Assets.xcassets */; };
 		7A74B09129FAE760008DA1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A74B08F29FAE760008DA1BD /* LaunchScreen.storyboard */; };
-		7A74B09C29FAE760008DA1BD /* RefactoringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A74B09B29FAE760008DA1BD /* RefactoringTests.swift */; };
+		7A74B0B529FAEF9D008DA1BD /* PasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A74B0B429FAEF9D008DA1BD /* PasswordChanger.swift */; };
+		7A74B0B729FB0900008DA1BD /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A74B0B629FB0900008DA1BD /* ChangePasswordViewController.swift */; };
+		7A74B0B929FB3CBD008DA1BD /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A74B0B829FB3CBD008DA1BD /* TestHelpers.swift */; };
+		7A74B0BB29FC11A1008DA1BD /* MockPasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A74B0BA29FC11A1008DA1BD /* MockPasswordChanger.swift */; };
+		7A74B0BD29FC1E58008DA1BD /* ChangePasswordViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A74B0BC29FC1E58008DA1BD /* ChangePasswordViewControllerTests.swift */; };
+		7AA3BFE129FC59CA000A3C68 /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA3BFE029FC59CA000A3C68 /* ViewControllerPresentationSpy */; };
+		7AA3BFE429FC7A75000A3C68 /* ChangePasswordViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA3BFE329FC7A75000A3C68 /* ChangePasswordViewControllerSnapshotTests.swift */; };
+		7AA3BFE729FC7AD6000A3C68 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA3BFE629FC7AD6000A3C68 /* iOSSnapshotTestCase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,12 @@
 		7A74B09029FAE760008DA1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A74B09229FAE760008DA1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A74B09729FAE760008DA1BD /* RefactoringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RefactoringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A74B09B29FAE760008DA1BD /* RefactoringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactoringTests.swift; sourceTree = "<group>"; };
+		7A74B0B429FAEF9D008DA1BD /* PasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChanger.swift; sourceTree = "<group>"; };
+		7A74B0B629FB0900008DA1BD /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		7A74B0B829FB3CBD008DA1BD /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		7A74B0BA29FC11A1008DA1BD /* MockPasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasswordChanger.swift; sourceTree = "<group>"; };
+		7A74B0BC29FC1E58008DA1BD /* ChangePasswordViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerTests.swift; sourceTree = "<group>"; };
+		7AA3BFE329FC7A75000A3C68 /* ChangePasswordViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA3BFE729FC7AD6000A3C68 /* iOSSnapshotTestCase in Frameworks */,
+				7AA3BFE129FC59CA000A3C68 /* ViewControllerPresentationSpy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +99,8 @@
 				7A74B08D29FAE760008DA1BD /* Assets.xcassets */,
 				7A74B08F29FAE760008DA1BD /* LaunchScreen.storyboard */,
 				7A74B09229FAE760008DA1BD /* Info.plist */,
+				7A74B0B429FAEF9D008DA1BD /* PasswordChanger.swift */,
+				7A74B0B629FB0900008DA1BD /* ChangePasswordViewController.swift */,
 			);
 			path = Refactoring;
 			sourceTree = "<group>";
@@ -92,7 +108,10 @@
 		7A74B09A29FAE760008DA1BD /* RefactoringTests */ = {
 			isa = PBXGroup;
 			children = (
-				7A74B09B29FAE760008DA1BD /* RefactoringTests.swift */,
+				7A74B0B829FB3CBD008DA1BD /* TestHelpers.swift */,
+				7A74B0BA29FC11A1008DA1BD /* MockPasswordChanger.swift */,
+				7A74B0BC29FC1E58008DA1BD /* ChangePasswordViewControllerTests.swift */,
+				7AA3BFE329FC7A75000A3C68 /* ChangePasswordViewControllerSnapshotTests.swift */,
 			);
 			path = RefactoringTests;
 			sourceTree = "<group>";
@@ -131,6 +150,10 @@
 				7A74B09929FAE760008DA1BD /* PBXTargetDependency */,
 			);
 			name = RefactoringTests;
+			packageProductDependencies = (
+				7AA3BFE029FC59CA000A3C68 /* ViewControllerPresentationSpy */,
+				7AA3BFE629FC7AD6000A3C68 /* iOSSnapshotTestCase */,
+			);
 			productName = RefactoringTests;
 			productReference = 7A74B09729FAE760008DA1BD /* RefactoringTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -163,6 +186,10 @@
 				Base,
 			);
 			mainGroup = 7A74B07829FAE75D008DA1BD;
+			packageReferences = (
+				7AA3BFDF29FC59CA000A3C68 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */,
+				7AA3BFE529FC7AD6000A3C68 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
+			);
 			productRefGroup = 7A74B08229FAE75D008DA1BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,6 +228,8 @@
 				7A74B08929FAE75D008DA1BD /* ViewController.swift in Sources */,
 				7A74B08529FAE75D008DA1BD /* AppDelegate.swift in Sources */,
 				7A74B08729FAE75D008DA1BD /* SceneDelegate.swift in Sources */,
+				7A74B0B729FB0900008DA1BD /* ChangePasswordViewController.swift in Sources */,
+				7A74B0B529FAEF9D008DA1BD /* PasswordChanger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A74B09C29FAE760008DA1BD /* RefactoringTests.swift in Sources */,
+				7A74B0B929FB3CBD008DA1BD /* TestHelpers.swift in Sources */,
+				7AA3BFE429FC7A75000A3C68 /* ChangePasswordViewControllerSnapshotTests.swift in Sources */,
+				7A74B0BD29FC1E58008DA1BD /* ChangePasswordViewControllerTests.swift in Sources */,
+				7A74B0BB29FC11A1008DA1BD /* MockPasswordChanger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +515,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7AA3BFDF29FC59CA000A3C68 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonreid/ViewControllerPresentationSpy";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		7AA3BFE529FC7AD6000A3C68 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/ios-snapshot-test-case.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7AA3BFE029FC59CA000A3C68 /* ViewControllerPresentationSpy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AA3BFDF29FC59CA000A3C68 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */;
+			productName = ViewControllerPresentationSpy;
+		};
+		7AA3BFE629FC7AD6000A3C68 /* iOSSnapshotTestCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AA3BFE529FC7AD6000A3C68 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
+			productName = iOSSnapshotTestCase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A74B07929FAE75D008DA1BD /* Project object */;
 }
