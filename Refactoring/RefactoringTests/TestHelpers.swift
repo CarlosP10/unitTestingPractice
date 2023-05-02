@@ -106,3 +106,8 @@ func executeRunLoop() {
 func tap(_ button: UIButton) {
     button.sendActions(for: .touchUpInside)
 }
+
+///To call the method through the text field delegate
+@discardableResult func shouldReturn(in textField: UITextField) -> Bool? {
+    textField.delegate?.textFieldShouldReturn?(textField)
+}
