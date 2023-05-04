@@ -38,9 +38,9 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         textField.becomeFirstResponder()
     }
     
-    private func putOnFocus(_ inputFocus: ChangePasswordViewModel.InputFocus) {
+    private func putOnFocus(_ inputFocus: InputFocus) {
         putInViewHierarchy(sut)
-        sut.viewModel.inputFocus = inputFocus
+        sut.updateInputFocus(inputFocus)
     }
     
     func test_outlets_shouldBeConnected() {
