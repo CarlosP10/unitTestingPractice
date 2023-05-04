@@ -23,7 +23,9 @@ class ChangePasswordViewController: UIViewController {
     var viewModel: ChangePasswordViewModel!
     
     private lazy var presenter = ChangePasswordPresenter(view: self,
-                                                         viewModel: viewModel)
+                                                         viewModel: viewModel,
+                                                         securityToken: securityToken,
+                                                         passwordChanger: passwordChanger)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,14 +71,14 @@ class ChangePasswordViewController: UIViewController {
         
         if viewModel.isNewPasswordTooShort {
             showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] in
-                self?.resetNewPasswords()
+                self?.presenter.resetNewPasswords()
             }
             return false
         }
         
         if viewModel.isConfirmPasswordMismatched {
             showAlert(message: viewModel.confirmationPasswordDoesNotMatchMessage) { [weak self] in
-                self?.resetNewPasswords()
+                self?.presenter.resetNewPasswords()
             }
             return false
         }
@@ -89,53 +91,13 @@ class ChangePasswordViewController: UIViewController {
         guard validateInputs() else {
             return
         }
-        setUpWaitingAppearance()
-        attemptToChangePassword()
-    }
-    
-    private func attemptToChangePassword() {
-        passwordChanger.change(
-            securityToken: securityToken,
-            oldPassword: viewModel.oldPassword,
-            newPassword: viewModel.newPassword,
-            onSuccess: { [weak self] in
-                self?.presenter.handleSuccess()
-            },
-            onFailure: { [weak self] message in
-                self?.handleFailure(message)
-            })
-    }
-    
-    private func handleFailure(_ message: String) {
-        hideActivityIndicator()
-        showAlert(message: message){ [weak self] _ in
-            self?.startOver()
-        }
+        presenter.setUpWaitingAppearance()
+        presenter.attemptToChangePassword()
     }
     
     private func hideSpinner() {
         activityIndicator.stopAnimating()
         activityIndicator.removeFromSuperview()
-    }
-    
-    private func startOver() {
-        clearAllPasswordFields()
-        updateInputFocus(.oldPassword)
-        hideBlurView()
-        setCancelButtonEnabled(true)
-    }
-    
-    private func setUpWaitingAppearance() {
-        updateInputFocus(.noKeyboard)
-        setCancelButtonEnabled(false)
-        showBlurView()
-        showActivityIndicator()
-    }
-    
-    private func resetNewPasswords() {
-        newPasswordTextField.text = ""
-        confirmPasswordTextField.text = ""
-        updateInputFocus(.newPassword)
     }
     
     private func updateViewModelToTextFields() {
@@ -240,6 +202,11 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
     //Clear Password Fields
     func clearAllPasswordFields() {
         oldPasswordTextField.text = ""
+        newPasswordTextField.text = ""
+        confirmPasswordTextField.text = ""
+    }
+    
+    func clearNewPasswordFields() {
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
     }
