@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7ADBAAA72A057D450021BB12 /* TDD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ADBAA9E2A057D450021BB12 /* TDD.framework */; };
 		7ADBAAAD2A057D450021BB12 /* TDD.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADBAAA12A057D450021BB12 /* TDD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ADBAAB72A0593D70021BB12 /* GreeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBAAB62A0593D70021BB12 /* GreeterTests.swift */; };
+		7ADBAAB92A0594E70021BB12 /* Greeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBAAB82A0594E70021BB12 /* Greeter.swift */; };
+		7ADBAABB2A05B30A0021BB12 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBAABA2A05B30A0021BB12 /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,9 @@
 		7ADBAA9E2A057D450021BB12 /* TDD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TDD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADBAAA12A057D450021BB12 /* TDD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDD.h; sourceTree = "<group>"; };
 		7ADBAAA62A057D450021BB12 /* TDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ADBAAB62A0593D70021BB12 /* GreeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreeterTests.swift; sourceTree = "<group>"; };
+		7ADBAAB82A0594E70021BB12 /* Greeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greeter.swift; sourceTree = "<group>"; };
+		7ADBAABA2A05B30A0021BB12 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,9 @@
 		7ADBAAAA2A057D450021BB12 /* TDDTests */ = {
 			isa = PBXGroup;
 			children = (
+				7ADBAAB62A0593D70021BB12 /* GreeterTests.swift */,
+				7ADBAAB82A0594E70021BB12 /* Greeter.swift */,
+				7ADBAABA2A05B30A0021BB12 /* TestHelpers.swift */,
 			);
 			path = TDDTests;
 			sourceTree = "<group>";
@@ -144,6 +153,7 @@
 					};
 					7ADBAAA52A057D450021BB12 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -195,6 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ADBAAB92A0594E70021BB12 /* Greeter.swift in Sources */,
+				7ADBAAB72A0593D70021BB12 /* GreeterTests.swift in Sources */,
+				7ADBAABB2A05B30A0021BB12 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +407,7 @@
 		7ADBAAB42A057D450021BB12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8T8Q835Q57;
@@ -402,6 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imparedes.test.TDDTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -410,6 +425,7 @@
 		7ADBAAB52A057D450021BB12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8T8Q835Q57;
