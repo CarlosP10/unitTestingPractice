@@ -10,7 +10,7 @@ final class ChangePasswordViewControllerSnapshotTests: FBSnapshotTestCase {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         sut = sb.instantiateViewController(identifier: String(
             describing: ChangePasswordViewController.self))
-        sut.viewModel = ChangePasswordViewModel(
+        sut.labels = ChangePasswordLabels(
             okButtonLabel: "OK",
             enterNewPasswordMessage: "Please enter a new password.",
             newPasswordTooShortMessage: "The new password should have at least 6 characters.",

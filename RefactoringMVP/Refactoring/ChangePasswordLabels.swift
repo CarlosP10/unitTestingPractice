@@ -1,11 +1,11 @@
 //
-//  ChangePasswordViewModel.swift
+//  ChangePasswordLabels.swift
 //  Refactoring
 //
 //  Created by Carlos Paredes on 3/5/23.
 //
 
-struct ChangePasswordViewModel {
+struct ChangePasswordLabels {
     let okButtonLabel: String
     let enterNewPasswordMessage: String
     let newPasswordTooShortMessage: String
@@ -17,14 +17,5 @@ struct ChangePasswordViewModel {
     let newPasswordPlaceholder = "New Password"
     let confirmPasswordPlaceholder = "Confirm New Password"
     let submitButtonLabel = "Submit"
-    
-    var oldPassword = ""
-    var newPassword = ""
-    var confirmPassword = ""
-    
-    var isOldPasswordEmpty: Bool { oldPassword.isEmpty }
-    var isNewPasswordEmpty: Bool { newPassword.isEmpty }
-    var isNewPasswordTooShort: Bool { newPassword.count < 6 }
-    var isConfirmPasswordMismatched: Bool { newPassword != confirmPassword }
     
 }

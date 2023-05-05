@@ -20,10 +20,10 @@ class ChangePasswordViewController: UIViewController {
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     let activityIndicator = UIActivityIndicatorView(style: .large)
     
-    var viewModel: ChangePasswordViewModel!
+    var labels: ChangePasswordLabels!
     
     private lazy var presenter = ChangePasswordPresenter(view: self,
-                                                         viewModel: viewModel,
+                                                         labels: labels,
                                                          securityToken: securityToken,
                                                          passwordChanger: passwordChanger)
     
@@ -42,68 +42,23 @@ class ChangePasswordViewController: UIViewController {
     }
     
     private func setLabels() {
-        navigationBar.topItem?.title = viewModel.title
-        oldPasswordTextField.placeholder = viewModel.oldPasswordPlaceholder
-        newPasswordTextField.placeholder = viewModel.newPasswordPlaceholder
-        confirmPasswordTextField.placeholder = viewModel.confirmPasswordPlaceholder
-        submitButton.setTitle(viewModel.submitButtonLabel, for: .normal)
+        navigationBar.topItem?.title = labels.title
+        oldPasswordTextField.placeholder = labels.oldPasswordPlaceholder
+        newPasswordTextField.placeholder = labels.newPasswordPlaceholder
+        confirmPasswordTextField.placeholder = labels.confirmPasswordPlaceholder
+        submitButton.setTitle(labels.submitButtonLabel, for: .normal)
     }
     
     @IBAction private func cancel() {
-//        view.endEditing(true)
-        updateInputFocus(.noKeyboard)
-        dismissModal()
-    }
-    
-    private func validateInputs() -> Bool {
-        // 1. Validate inputs
-        if viewModel.isOldPasswordEmpty {
-            updateInputFocus(.oldPassword)
-            return false
-        }
-        
-        if viewModel.isNewPasswordEmpty {
-            showAlert(message: viewModel.enterNewPasswordMessage) {[weak self] in
-                self?.updateInputFocus(.newPassword)
-            }
-            return false
-        }
-        
-        if viewModel.isNewPasswordTooShort {
-            showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] in
-                self?.presenter.resetNewPasswords()
-            }
-            return false
-        }
-        
-        if viewModel.isConfirmPasswordMismatched {
-            showAlert(message: viewModel.confirmationPasswordDoesNotMatchMessage) { [weak self] in
-                self?.presenter.resetNewPasswords()
-            }
-            return false
-        }
-        
-        return true
+        presenter.cancel()
     }
     
     @IBAction private func changePassword() {
-        updateViewModelToTextFields()
-        guard validateInputs() else {
-            return
-        }
-        presenter.setUpWaitingAppearance()
-        presenter.attemptToChangePassword()
-    }
-    
-    private func hideSpinner() {
-        activityIndicator.stopAnimating()
-        activityIndicator.removeFromSuperview()
-    }
-    
-    private func updateViewModelToTextFields() {
-        viewModel.oldPassword = oldPasswordTextField.text ?? ""
-        viewModel.newPassword = newPasswordTextField.text ?? ""
-        viewModel.confirmPassword = confirmPasswordTextField.text ?? ""
+        let passwordInputs = PasswordInputs(
+            oldPassword: oldPasswordTextField.text ?? "",
+            newPassword: newPasswordTextField.text ?? "",
+            confirmPassword: confirmPasswordTextField.text ?? "")
+        presenter.changePassword(passwordInputs: passwordInputs)
     }
     
     private func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {
@@ -112,7 +67,7 @@ class ChangePasswordViewController: UIViewController {
             message: message,
             preferredStyle: .alert)
         let okButton = UIAlertAction(
-            title: viewModel.okButtonLabel,
+            title: labels.okButtonLabel,
             style: .default,
             handler: okAction)
         

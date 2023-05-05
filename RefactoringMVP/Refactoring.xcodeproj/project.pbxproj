@@ -21,9 +21,10 @@
 		7AA3BFE129FC59CA000A3C68 /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA3BFE029FC59CA000A3C68 /* ViewControllerPresentationSpy */; };
 		7AA3BFE429FC7A75000A3C68 /* ChangePasswordViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA3BFE329FC7A75000A3C68 /* ChangePasswordViewControllerSnapshotTests.swift */; };
 		7AA3BFE729FC7AD6000A3C68 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA3BFE629FC7AD6000A3C68 /* iOSSnapshotTestCase */; };
-		7ADBAA8D2A0305330021BB12 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBAA8C2A0305330021BB12 /* ChangePasswordViewModel.swift */; };
+		7ADBAA8D2A0305330021BB12 /* ChangePasswordLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBAA8C2A0305330021BB12 /* ChangePasswordLabels.swift */; };
 		7ADBAA8F2A044B170021BB12 /* ChangePasswordViewCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBAA8E2A044B170021BB12 /* ChangePasswordViewCommands.swift */; };
 		7ADBAA912A044B740021BB12 /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBAA902A044B740021BB12 /* ChangePasswordPresenter.swift */; };
+		7ADBAA932A054BE30021BB12 /* PasswordInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBAA922A054BE30021BB12 /* PasswordInputs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +53,10 @@
 		7A74B0BA29FC11A1008DA1BD /* MockPasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasswordChanger.swift; sourceTree = "<group>"; };
 		7A74B0BC29FC1E58008DA1BD /* ChangePasswordViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerTests.swift; sourceTree = "<group>"; };
 		7AA3BFE329FC7A75000A3C68 /* ChangePasswordViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
-		7ADBAA8C2A0305330021BB12 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		7ADBAA8C2A0305330021BB12 /* ChangePasswordLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordLabels.swift; sourceTree = "<group>"; };
 		7ADBAA8E2A044B170021BB12 /* ChangePasswordViewCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewCommands.swift; sourceTree = "<group>"; };
 		7ADBAA902A044B740021BB12 /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
+		7ADBAA922A054BE30021BB12 /* PasswordInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordInputs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,8 @@
 				7A74B09229FAE760008DA1BD /* Info.plist */,
 				7A74B0B429FAEF9D008DA1BD /* PasswordChanger.swift */,
 				7A74B0B629FB0900008DA1BD /* ChangePasswordViewController.swift */,
-				7ADBAA8C2A0305330021BB12 /* ChangePasswordViewModel.swift */,
+				7ADBAA922A054BE30021BB12 /* PasswordInputs.swift */,
+				7ADBAA8C2A0305330021BB12 /* ChangePasswordLabels.swift */,
 				7ADBAA8E2A044B170021BB12 /* ChangePasswordViewCommands.swift */,
 				7ADBAA902A044B740021BB12 /* ChangePasswordPresenter.swift */,
 			);
@@ -236,8 +239,9 @@
 			files = (
 				7A74B08929FAE75D008DA1BD /* ViewController.swift in Sources */,
 				7ADBAA912A044B740021BB12 /* ChangePasswordPresenter.swift in Sources */,
-				7ADBAA8D2A0305330021BB12 /* ChangePasswordViewModel.swift in Sources */,
+				7ADBAA8D2A0305330021BB12 /* ChangePasswordLabels.swift in Sources */,
 				7A74B08529FAE75D008DA1BD /* AppDelegate.swift in Sources */,
+				7ADBAA932A054BE30021BB12 /* PasswordInputs.swift in Sources */,
 				7ADBAA8F2A044B170021BB12 /* ChangePasswordViewCommands.swift in Sources */,
 				7A74B08729FAE75D008DA1BD /* SceneDelegate.swift in Sources */,
 				7A74B0B729FB0900008DA1BD /* ChangePasswordViewController.swift in Sources */,
